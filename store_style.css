@@ -8,6 +8,20 @@
 
 .box {
   background-color: rgb(78, 178, 206);
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-areas: "sidebar products" "sidebar products" "sidebar buttons";
+  gap: 20px;
+  padding: 20px;
+}
+.box .sidebar {
+  grid-area: sidebar;
+}
+.box .products-container {
+  grid-area: products;
+}
+.box .buttons {
+  grid-area: buttons;
 }
 
 .products-container {
@@ -58,8 +72,21 @@
 
 .store-category {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 10px;
+}
+
+#aside-menu {
+  width: 83%;
+  padding: 10px;
+  background-color: rgb(194, 95, 193);
+  border-radius: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 12% 8%;
+  text-align: center;
 }
 
 .categoryBtn {

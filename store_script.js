@@ -242,3 +242,72 @@ prevBtn.addEventListener("click", () => {
     }
 
 })
+
+
+// ბრენდების სახელების გამოტანა
+
+const brands=document.getElementById("aside-menu")
+
+async function brandList() {
+    try {
+    const response=await fetch("https://api.everrest.educata.dev/shop/products/brands")
+    const data= await response.json()
+     console.log(data)
+
+
+     data.forEach(item => {
+
+            brands.innerHTML+= brandsPrint(item)
+
+        })
+
+
+    function brandsPrint(brandsList){
+        return `
+       
+     <option value="${brandsList}">
+      ${brandsList.toUpperCase()}
+     </option>
+  
+        
+        `
+    }
+
+
+    } catch (error) {
+        console.log("შეცდომაა" , error)
+    }
+}
+brandList()
+
+
+function brandChanged(brandName) {
+    currentPage = 1
+    getBrandProducts(brandName)
+}
+
+
+
+// BRAND PRODUCTS
+
+
+async function getBrandProducts(brandName) {
+
+    try {
+
+        const response = await fetch(
+            `https://api.everrest.educata.dev/shop/products/brand/${brandName}?page_index=${currentPage}&page_size=${pageSize}`
+        )
+
+        const data = await response.json()
+
+        products.innerHTML = ""
+
+        data.products.forEach(item => {
+            products.innerHTML += productsPrint(item)
+        })
+
+    } catch (error) {
+        console.log(error)
+    }
+}
