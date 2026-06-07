@@ -30,19 +30,87 @@
    
     </div>
 
-   <select id="aside-menu"  onchange="brandChanged(this.value)">
+    <!-- //search keyword -->
+    <input type="text" id="searchInput" placeholder="Search product">
+    <button id="searchBtn">Search </button>
+
+<!-- //search rating -->
+    <select  id="rating">
+        <option value="--">Rating</option>
+        <option value="5">5 stars</option>
+        <option value="4">4 stars</option>
+        <option value="3">3 stars</option>
+        <option value="2">2 stars</option>
+        <option value="1">1 stars</option>
+    </select>
+    <!-- //search price -->
+    <input type="number" id="minPrice" placeholder="Min Price">
+    <input type="number" id="maxPrice" placeholder="Max Price">
+<!-- //search sort -->
+   <select name="" id="sortBy">
+    <option value="">No sort</option>
+     <option value="price">Price</option>
+     <option value="rating">Rating</option>
+     <option value="issue date">Issue date</option>
+     <option value="title">title</option>
+  
+   </select>
+   <!-- search sort Direction -->
+    <select  id="sortDirection">
+        <option value="asc">Low To High</option>
+        <option value="desc">High To Low</option>
+    </select>
+
+   <select id="aside-menu">
+
+    
     <option  selected disabled>
         Select Brand
     </option>
+    <option value="">Any Brand</option>
     </select>
     </aside> 
 
 
     <div class="buttons">
         <button id="prev">Prev</button>
+        <button class="btn1">1</button>
+        <button class="btn1">2</button>
+        <button class="btn1">3</button>
+        <button class="btn1">4</button>
+        <button class="btn1">5</button>
         <button id="next">Next</button>
     </div>
+<!-- sign up -->
+ <form id="signup-form">
+    <label for="signup-firstname"> Name</label>
+ <input type="text" id="signup-firstname" placeholder="your name" name="firstName">
+    <label for="signup-lastname"> Lastname</label>
+ <input type="text" id="signup-lastname" placeholder="your lastname" name="lastName">
+<label for="signup-age"> Age</label>
+ <input type="number" id="signup-age" placeholder="your age" name="age">
+<label for="signup-email"> Email</label>
+ <input type="email" id="signup-email" placeholder="your email" name="email">
+<label for="signup-password"> Password</label>
+ <input type="text" id="signup-password" placeholder="your password" name="password">
+<label for="signup-address"> Address</label>
+ <input type="text" id="signup-address" placeholder="your address" name="address">
+<label for="signup-phone"> Phone</label>
+ <input type="text" id="signup-phone" placeholder="your phone (including country code)" name="phone">
+<label for="signup-zipcode"> Zipcode</label>
+ <input type="text"  id="signup-zipcode" placeholder="zipcode" name="zipcode">
+<label for="signup-avatar"> Avatar</label>
+ <input type="text"  id="signup-avatar" placeholder="avatar" name="avatar">
+<label class="gender" for="gender"> gender</label>
+ <input type="radio"  value="MALE"  name="gender" class="gender" id="gender">Male
+ <input type="radio"  value="FEMALE"   name="gender"class="gender">Female
+ <input type="radio"  value="OTHER"  name="gender"class="gender">Other
+
+<button type="submit">Submit</button>
+ </form>
+
 </div>
     <script src="./store_script.js"></script>
+
 </body>
 </html>

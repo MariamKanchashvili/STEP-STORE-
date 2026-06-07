@@ -51,6 +51,11 @@
   margin-top: 5%;
   padding: 10px;
 }
+.buttons .btn1 {
+  background-color: rgb(194, 95, 193);
+  padding: 10px;
+  border-radius: 8px;
+}
 .buttons #prev {
   padding: 10px;
   background-color: rgb(194, 95, 193);
@@ -88,6 +93,9 @@
   margin: 12% 8%;
   text-align: center;
 }
+#aside-menu:hover {
+  background-color: rgb(78, 178, 206);
+}
 
 .categoryBtn {
   margin: 20px;
@@ -104,4 +112,10 @@
   padding: 5px;
   border-radius: 8px;
   background-color: rgb(36, 178, 152);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }/*# sourceMappingURL=store_style.css.map */
