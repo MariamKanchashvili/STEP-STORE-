@@ -449,5 +449,33 @@ document
 .getElementById("signup-form")
 .addEventListener("submit",signUp)
 
+// Sign In
+
+async function signIn() {
+    const email=document.getElementById("signin-email").value
+    const password=document.getElementById("signin-password").value
+
+    const res=await fetch("https://api.everrest.educata.dev/auth/sign_in",{
+        method:"POST",
+        headers:{
+        "Content-type":"application/json",
+        "Accept":"*/*",
+         },
+         body:JSON.stringify(email,password)
+    })
+
+    const data=await res.json()
+    accessToken=data.access_token;
+
+  if(res.ok){
+    alert("Signed in")
+  }else{
+    alert("Something went wrong")
+  }
+  console.log(data)
+
+  sessionStorage.setItem("token",JSON.stringify(data))
+}
+
 
 

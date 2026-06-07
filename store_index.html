@@ -106,9 +106,29 @@
  <input type="radio"  value="FEMALE"   name="gender"class="gender">Female
  <input type="radio"  value="OTHER"  name="gender"class="gender">Other
 
-<button type="submit">Submit</button>
+<button type="submit">Sign up</button>
  </form>
 
+<!-- sign in -->
+<form id="signin-form">
+
+<label for="signin-email"> Email</label>
+
+ <input 
+ type="email" 
+ id="signin-email" 
+ placeholder="your email" 
+ name="email">
+
+<label for="signin-password"> Password</label>
+
+ <input 
+ type="text" 
+ id="signin-password" 
+ placeholder="your password" 
+ name="password">
+ <button type="submit" onclick="signIn()">Sign in </button>
+</form>
 </div>
     <script src="./store_script.js"></script>
 
