@@ -114,8 +114,47 @@
   background-color: rgb(36, 178, 152);
 }
 
-form {
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signUp_form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+}
+
+.signIn_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "email-key email-value" "password-key password-value" "submit submit";
+  gap: 10px;
+}
+
+.email-input {
+  grid-area: email-value;
+}
+
+.email-label {
+  grid-area: email-key;
+}
+
+.password-input {
+  grid-area: password-value;
+}
+
+.password-label {
+  grid-area: password-key;
+}
+
+.form-submit {
+  grid-area: submit;
+}
+
+.gender-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
 }/*# sourceMappingURL=store_style.css.map */

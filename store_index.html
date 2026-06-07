@@ -81,8 +81,9 @@
         <button class="btn1">5</button>
         <button id="next">Next</button>
     </div>
+    <div class="form-box">
 <!-- sign up -->
- <form id="signup-form">
+ <form id="signup-form" class="signUp_form">
     <label for="signup-firstname"> Name</label>
  <input type="text" id="signup-firstname" placeholder="your name" name="firstName">
     <label for="signup-lastname"> Lastname</label>
@@ -101,34 +102,42 @@
  <input type="text"  id="signup-zipcode" placeholder="zipcode" name="zipcode">
 <label for="signup-avatar"> Avatar</label>
  <input type="text"  id="signup-avatar" placeholder="avatar" name="avatar">
+ 
 <label class="gender" for="gender"> gender</label>
+<div class="gender-input">
  <input type="radio"  value="MALE"  name="gender" class="gender" id="gender">Male
  <input type="radio"  value="FEMALE"   name="gender"class="gender">Female
  <input type="radio"  value="OTHER"  name="gender"class="gender">Other
-
+</div>
+<br>
 <button type="submit">Sign up</button>
  </form>
 
+ 
 <!-- sign in -->
-<form id="signin-form">
+<form id="signin-form" class="signIn_form">
 
-<label for="signin-email"> Email</label>
+<label for="signin-email" class="email-label"> Email</label>
 
  <input 
  type="email" 
  id="signin-email" 
  placeholder="your email" 
- name="email">
+ name="email"
+ class="email-input">
 
-<label for="signin-password"> Password</label>
+<label for="signin-password" class="password-label"> Password</label>
 
  <input 
  type="text" 
  id="signin-password" 
  placeholder="your password" 
- name="password">
- <button type="submit" onclick="signIn()">Sign in </button>
+ name="password"
+ class="password-input"
+ >
+ <button type="submit" onclick="signIn()" class="form-submit">Sign in </button>
 </form>
+</div>
 </div>
     <script src="./store_script.js"></script>
 
